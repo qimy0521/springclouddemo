@@ -28,9 +28,6 @@
 
 	<dependencies>
 
-
-
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -42,6 +39,7 @@
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
             <version>${eureka-server.version}</version>
         </dependency>
+
 	</dependencies>
 
     <dependencyManagement>
@@ -55,8 +53,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-
 	<build>
 		<plugins>
 			<plugin>
