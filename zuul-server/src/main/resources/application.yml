@@ -8,12 +8,11 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-#配置路由规则
+  instance:
+    hostname: ${spring.cloud.client.ip-address}
+#配置路由规则(不按照SERVER-ID 来配置,只配置注册中心，让zuul自己去注册中心找对应的服务)
 zuul:
-  routes:
-    service-hi:
-      path: /hi
-      serviceId: service-hi
-    service-feign:
-      path: /hi
-      serviceId: service-feign
+  sensitiveHeaders:
+    host:
+      socket-timeout-millis: 60000
+      connect-timeout-millis: 60000

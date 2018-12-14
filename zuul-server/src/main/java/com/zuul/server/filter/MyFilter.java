@@ -37,11 +37,11 @@ public class MyFilter extends ZuulFilter {
     public Object run() throws ZuulException {
         RequestContext currentContext = RequestContext.getCurrentContext();
         HttpServletRequest request = currentContext.getRequest();
-        String name = request.getParameter("name");
-        if(name.equals("你好")){
-            request.setAttribute("name","你好，傻逼");
-        }
-        log.info("过滤参数为{}",name);
+        //String name = reques
+        //if(name.equals("你好")){
+        //    request.setAttribute("name","你好，傻逼");
+        //}
+        //log.info("过滤参数为{}",name);
         return null;
     }
 }
